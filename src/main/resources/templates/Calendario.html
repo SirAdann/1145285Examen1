@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+<meta charset="UTF-8" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <link rel="stylesheet"  href="../static/bootstrap/css/bootstrap.min.css"  th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+    <meta charset="UTF-8">
+    <title>calendario</title>
+
+
+    <link rel='stylesheet' href='webjars/fullcalendar/3.5.1/dist/fullcalendar.css' />
+    <script src="webjars/jquery/2.0.3/jquery.min.js"></script>
+    <script src='webjars/moment/2.19.1/min/moment.min.js'></script>
+    <script src='webjars/fullcalendar/3.5.1/dist/fullcalendar.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                events: {
+                    url : '/api/event/all'
+                }
+            });
+        });
+        </script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 text-center">
+            <img th:src="@{/bootstrap/images/medlogo.png}" width="150" height="150" class="d-inline-block align-top" alt="Inicio">
+        </div>
+        <div class="col-md-10">
+            <br><h1 class="center-text">MEDICLINIC Consultorio de especialidades</h1></div>
+    </div>
+</div>
+
+<!-- Barra de navegación -->
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img th:src="@{/bootstrap/images/logo.png}" width="50" height="30" class="d-inline-block align-top" alt="Inicio">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+
+
+                <!--
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contabilidad </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                        <a class="dropdown-item" href="${ urlRoot }oficios?idParam1=13"  onclick="oficios">Oficios de Cierre de Ejercicio</a>
+                                        <a class="dropdown-item" href="${ urlRoot }cont_gob?idParam1=12">Contabilidad Gubernamental</a>
+                                        <a class="dropdown-item" href="${ urlRoot }LineamientosContables?idParam1=11">Lineamientos Contables</a>
+                                        <a class="dropdown-item" href="${ urlRoot }capacitaciones?idParam1=14">Capacitaciones</a>
+
+                                    </div>
+                                </li>
+
+                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PFCE </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="${ urlRoot }politicas?idParam1=8">Políticas</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Herramientas </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="${ urlRoot }usuarios/lista">Usuarios</a>
+                                        <a class="dropdown-item" href="${ urlRoot }secciones">Secciones</a>
+                                        <a class="dropdown-item" href="${ urlRoot }documentos/index">Documentos</a>
+                                        <a class="dropdown-item" href="${ urlRoot }dependencias">Dependencias</a>
+                                    </div>
+                                </li>
+                                -->
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link" href="/">Principal</a></li>
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link" href="/cita">Citas</a></li>
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link" href="/cal">Calendario</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+
+<br>
+
+
+<div class="container">
+    <div class="col">
+        <div class="col">
+            <div clas="col-7">
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+<!--<script type="text/javascript" th:src="@{/vendor/assets/full_calendar.js}"></script>-->
+
+
+
+
+</html>

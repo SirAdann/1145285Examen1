@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8" xmlns:th="http://thymeleaf.org">
+    <title>Principal</title>
+    <link rel="stylesheet"  href="../static/bootstrap/css/bootstrap.min.css"  th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <!--  Línea para agregar los íconos de las acciones-->
+    <link rel="stylesheet" th:href="@{/bootstrap/css/glyphicons.css}">
+</head>
+<body>
+<!-- Encabezado -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 text-center">
+            <img th:src="@{/bootstrap/images/medlogo.png}" width="150" height="150" class="d-inline-block align-top" alt="Inicio">
+        </div>
+        <div class="col-md-10">
+            <br><h1 class="center-text">MEDICLINIC Consultorio de especialidades</h1></div>
+    </div>
+</div>
+
+<!-- Barra de navegación -->
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img th:src="@{/bootstrap/images/logo.png}" width="50" height="30" class="d-inline-block align-top" alt="Inicio">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+
+
+<!--
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contabilidad </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                        <a class="dropdown-item" href="${ urlRoot }oficios?idParam1=13"  onclick="oficios">Oficios de Cierre de Ejercicio</a>
+                        <a class="dropdown-item" href="${ urlRoot }cont_gob?idParam1=12">Contabilidad Gubernamental</a>
+                        <a class="dropdown-item" href="${ urlRoot }LineamientosContables?idParam1=11">Lineamientos Contables</a>
+                        <a class="dropdown-item" href="${ urlRoot }capacitaciones?idParam1=14">Capacitaciones</a>
+
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PFCE </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="${ urlRoot }politicas?idParam1=8">Políticas</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Herramientas </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="${ urlRoot }usuarios/lista">Usuarios</a>
+                        <a class="dropdown-item" href="${ urlRoot }secciones">Secciones</a>
+                        <a class="dropdown-item" href="${ urlRoot }documentos/index">Documentos</a>
+                        <a class="dropdown-item" href="${ urlRoot }dependencias">Dependencias</a>
+                    </div>
+                </li>
+                -->
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link" href="/">Principal</a></li>
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link" href="/cita">Citas</a></li>
+                <li class="nav-item dropdown">
+                <li class="nav-item"><a class="nav-link" href="/cal">Calendario</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <br>
+    <h3 class="text-center font-weight-bold">¿Que es Mediclinic?</h3>
+    <br>
+
+    <div class="container">
+
+
+        <p class="text-justify"> El Servicio de <b>Mediclinic</b> está compuesto por un equipo de profesionales que brinda asistencia médica a pacientes que consultan de manera ambulatoria (en consultorios externos), o que requieren internación por enfermedades agudas y crónicas (en sala general e internación transitoria), y realiza el seguimiento de aquellos enfermos, quirúrgicos y no quirúrgicos, que por su gravedad  o alto riesgo precisaron ingresar en cuidados críticos y resolvieron su cuadro.
+
+
+
+
+       <p class="text-justify">            El vertiginoso avance de la tecnología y la super-especialización ha generado como efecto colateral la fragmentación de la atención médica.
+       </p>
+
+        <p class="text-justify">            El Médico Clínico es un especialista en adultos que enfoca al paciente con una concepción integral del ser humano, capacitado para prevenir, diagnosticar, tratar y rehabilitar la patología prevalente, así como para guiar al paciente por todos los niveles de atención y realizar promoción de la salud; cumple un rol fundamental en la medicina actual.
+        <p class="text-justify">            Es el desafío y compromiso de nuestro servicio, asociar y combinar esta visión individual y singular del paciente con una correcta y eficiente utilización de los adelantos tecnológicos mencionados, en el marco de un trabajo en equipo e interdisciplinario, bajo una continua y permanente puesta al día de la ciencia médica.</p>
+        </p>
+        </p>
+
+
+        <br>
+        <h3 class="text-center">Atentamente</h3>
+        <h3 class="text-center">Gilberto Pazos Fuentes</h3>
+        <h3 class="text-center">COORDINADOR</h3>
+        <br>
+    </div>
+</div>
+
+
+
+</body>
+</html>
